@@ -68,6 +68,11 @@ namespace udemy_c_sharp_beginner
                 + last.Substring(0, 1);
         }
 
+        public String getLastFirst()
+        {
+            return last + ", " + first + " " + middle;
+        }
+
     }
 
     class Program
@@ -76,6 +81,8 @@ namespace udemy_c_sharp_beginner
         {
             Name myName = new Name("John", "Q", "Public");
             Console.WriteLine(myName.getInitials());
+            Console.WriteLine(myName.ToString());
+            Console.WriteLine(myName.getLastFirst());
             Console.ReadKey();
         }
     }
