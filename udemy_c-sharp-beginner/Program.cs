@@ -43,6 +43,16 @@ namespace udemy_c_sharp_beginner
             last = lname;
         }
 
+        public String getMiddle()
+        {
+            return middle;
+        }
+
+        public void setMiddle(String mname)
+        {
+            middle = mname;
+        }
+
         public void setName(String fname, String mname, String lname)
         {
             first = fname;
