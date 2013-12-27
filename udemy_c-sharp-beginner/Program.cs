@@ -62,6 +62,12 @@ namespace udemy_c_sharp_beginner
             }
         }
 
+        public String getInitials()
+        {
+            return first.Substring(0, 1) + middle.Substring(0, 1)
+                + last.Substring(0, 1);
+        }
+
     }
 
     class Program
@@ -69,12 +75,7 @@ namespace udemy_c_sharp_beginner
         static void Main(string[] args)
         {
             Name myName = new Name("John", "Q", "Public");
-            Console.WriteLine(myName.ToString());
-            myName.First = "Jon";
-            Console.WriteLine(myName.ToString());
-            myName.setLast("Brown");
-            Console.WriteLine(myName.ToString());
-            Console.WriteLine(myName.getLast() + ", " + myName.First);
+            Console.WriteLine(myName.getInitials());
             Console.ReadKey();
         }
     }
