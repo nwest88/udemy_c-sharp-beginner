@@ -60,6 +60,30 @@ namespace udemy_c_sharp_beginner
             last = lname;
         }
 
+        public String Middle
+        {
+            get
+            {
+                return middle;
+            }
+            set
+            {
+                middle = value;
+            }
+        }
+
+        public String Last
+        {
+            get
+            {
+                return last;
+            }
+            set
+            {
+                last = value;
+            }
+        }
+        
         public String First
         {
             get
@@ -89,10 +113,14 @@ namespace udemy_c_sharp_beginner
     {
         static void Main(string[] args)
         {
-            Name myName = new Name("John", "Q", "Public");
-            Console.WriteLine(myName.getInitials());
-            Console.WriteLine(myName.ToString());
-            Console.WriteLine(myName.getLastFirst());
+            Name aName = new Name("Jane", "Micah", "Smith");
+            Console.WriteLine(aName.ToString());
+            aName.Middle = "Mary";
+            Console.WriteLine(aName.getLastFirst());
+            Console.WriteLine("Her middle name is " + aName.Middle);
+            aName.Last = "Brown";
+            Console.WriteLine(aName.First + " " + aName.Middle + " "
+                + aName.Last);
             Console.ReadKey();
         }
     }
