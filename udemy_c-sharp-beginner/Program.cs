@@ -18,7 +18,7 @@ namespace udemy_c_sharp_beginner
 
         public override String ToString()
         {
-            return first + " " + middle + " " + last;
+            return middle + " " + first + " " + last;
         }
 
         // get and set methods
