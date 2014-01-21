@@ -9,6 +9,15 @@ namespace udemy_c_sharp_beginner
     {
         static void Main(string[] args)
         {
+            int num1, num2;
+            num1 = 24;
+            num2 = 13;
+            Console.WriteLine(num1 + num2);
+            Console.WriteLine(num1 - num2);
+            Console.WriteLine(num1 * num2);
+            Console.WriteLine(num1 / num2);
+            Console.ReadKey();
+
         }
     }
 }
