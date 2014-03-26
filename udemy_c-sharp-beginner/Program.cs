@@ -5,123 +5,74 @@ using System.Text;
 
 namespace udemy_c_sharp_beginner
 {
-    class Name
+
+    class Date
     {
-        private String first, middle, last;
+        private int month, day, year;
 
-        public Name(String fname, String mname, String lname)
+        public Date(int m, int d, int y)
         {
-            first = fname;
-            middle = mname;
-            last = lname;
+            month = m;
+            day = d;
+            year = y;
         }
 
-        public override String ToString()
+        public override string ToString()
         {
-            return first + " " + middle + " " + last;
+            return month + "/" + day + "/" + year;
         }
 
-        // get and set methods
-
-        public String getLast()
-        {
-            return last;
-        }
-
-        public String getFirst()
-        {
-            return first;
-        }
-
-        public void setFirst(String fname)
-        {
-            first = fname;
-        }
-
-        public void setLast(String lname)
-        {
-            last = lname;
-        }
-
-        public String getMiddle()
-        {
-            return middle;
-        }
-
-        public void setMiddle(String mname)
-        {
-            middle = mname;
-        }
-
-        public void setName(String fname, String mname, String lname)
-        {
-            first = fname;
-            middle = mname;
-            last = lname;
-        }
-
-        public String Middle
+        public int Month
         {
             get
             {
-                return middle;
+                return month;
             }
             set
             {
-                middle = value;
+                month = value;
             }
         }
+        //One of three property methods
 
-        public String Last
+        public int Day
         {
             get
             {
-                return last;
+                return day;
             }
             set
             {
-                last = value;
+                day = value;
             }
         }
-        
-        public String First
+        //One of three propert methods
+        public int Year
         {
             get
             {
-                return first;
+                return year;
             }
             set
             {
-                first = value;
+                year = value;
             }
         }
-
-        public String getInitials()
-        {
-            return first.Substring(0, 1) + middle.Substring(0, 1)
-                + last.Substring(0, 1);
-        }
-
-        public String getLastFirst()
-        {
-            return last + ", " + first + " " + middle;
-        }
-
     }
-
+    //One of three property methods
     class Program
     {
         static void Main(string[] args)
         {
-            Name aName = new Name("Jane", "Micah", "Smith");
-            Console.WriteLine(aName.ToString());
-            aName.Middle = "Mary";
-            Console.WriteLine(aName.getLastFirst());
-            Console.WriteLine("Her middle name is " + aName.Middle);
-            aName.Last = "Brown";
-            Console.WriteLine(aName.First + " " + aName.Middle + " "
-                + aName.Last);
+            Date today = new Date(7, 12, 2011);
+            Console.WriteLine("Today is " + today.ToString());
+            today.Day = 11;
+            today.Month = 8;
+            Console.WriteLine("Today is " + today.ToString());
+            Console.WriteLine(today.Month + "/" + today.Day + "/" + today.Year);
             Console.ReadKey();
         }
     }
 }
+    
+
