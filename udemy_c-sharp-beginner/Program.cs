@@ -5,72 +5,23 @@ using System.Text;
 
 namespace udemy_c_sharp_beginner
 {
-
-    class Date
-    {
-        private int month, day, year;
-
-        public Date(int m, int d, int y)
-        {
-            month = m;
-            day = d;
-            year = y;
-        }
-
-        public override string ToString()
-        {
-            return month + "/" + day + "/" + year;
-        }
-
-        public int Month
-        {
-            get
-            {
-                return month;
-            }
-            set
-            {
-                month = value;
-            }
-        }
-        //One of three property methods
-
-        public int Day
-        {
-            get
-            {
-                return day;
-            }
-            set
-            {
-                day = value;
-            }
-        }
-        //One of three propert methods
-        public int Year
-        {
-            get
-            {
-                return year;
-            }
-            set
-            {
-                year = value;
-            }
-        }
-    }
-    //One of three property methods
+       
     class Program
     {
         static void Main(string[] args)
         {
-            Date today = new Date(7, 12, 2011);
-            Console.WriteLine("Today is " + today.ToString());
-            today.Day = 11;
-            today.Month = 8;
-            Console.WriteLine("Today is " + today.ToString());
-            Console.WriteLine(today.Month + "/" + today.Day + "/" + today.Year);
+            double num1, num2;
+            num1 = 24;
+            num2 = 13;
+            Console.WriteLine(num1 + num2);
+            Console.WriteLine(num1 - num2);
+            Console.WriteLine(num1 * num2);
+            Console.WriteLine(num1 / num2);
+            Console.WriteLine(num1 % num2);
+            Console.WriteLine(4 % 2);
+            Console.WriteLine(3 % 2);
             Console.ReadKey();
+          
         }
     }
 }
